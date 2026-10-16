@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 import Bio from "./Bio";
 import StatCard from "./StatCard";
-import Repositories from "./Repositories";
+import RepoCard from "./RepoCard";
 
 function App() {
   const [followers, setFollowers] = useState(0);
@@ -57,7 +57,26 @@ function App() {
         </div>
       </div>
 
-      <Repositories />
+      <main className="grid grid-cols-3 gap-8 px-20 pt-8">
+        <RepoCard
+          name="portfolio"
+          description="My personal page built with React."
+          language="JavaScript"
+          commits={48}
+        />
+        <RepoCard
+          name="todo-api"
+          description="A small REST API for a to-do list."
+          language="Java"
+          commits={31}
+        />
+        <RepoCard
+          name="dotfiles"
+          description="My terminal and editor settings."
+          language="Shell"
+          commits={12}
+        />
+      </main>
 
       <footer className="mt-auto bg-[#222222] px-20 py-6 text-center text-xl text-[#FAF3E1]">
         <p>Every profile on DevHub is public.</p>
