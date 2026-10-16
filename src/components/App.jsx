@@ -37,3 +37,4 @@ function App() {
 }
 
 export default App;
+// THIS COMMIT IS FOR THE PURPOSE OF KNOWING THAT I ALREADY ADDED THE COMPONETS TO THE FOLDER components
