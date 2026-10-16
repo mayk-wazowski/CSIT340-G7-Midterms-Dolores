@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "./Navbar";
 
 function App() {
   const [followers, setFollowers] = useState(0);
@@ -34,24 +35,18 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#FAF3E1] text-[#222222]">
-      <nav className="flex items-center justify-between bg-[#222222] px-20 py-6 text-[#FAF3E1]">
-        <h1 className="text-3xl font-bold">DevHub</h1>
-        <ul className="flex gap-10 text-xl">
-          <li>Profile</li>
-          <li>Repositories</li>
-          <li>Settings</li>
-        </ul>
-      </nav>
+      <Navbar />
 
       <div className="flex items-end justify-between bg-[#F5E7C6] px-20 py-10">
         <div>
           <header>
-            <h2 className="text-6xl font-bold">MIKE JUNEIL DOLORES</h2>
+            <h2 className="text-6xl font-bold">MIKE JUNEIL L. DOLORES</h2>
             <p className="mt-1 text-2xl text-[#FA8112]">
-              @mayk-wazowski
+              @YOUR_GITHUB_USERNAME
             </p>
             <p className="mt-3 text-2xl">Front-end developer from Cebu City.</p>
           </header>
+
           <div className="mt-6 flex gap-6">
             <div className="w-48 rounded-xl bg-[#FAF3E1] py-4 text-center">
               <p className="text-4xl font-bold text-[#FA8112]">{followers}</p>
@@ -105,6 +100,7 @@ function App() {
             <span>48 commits</span>
           </div>
         </div>
+
         <div className="rounded-xl border-2 border-[#222222] p-8">
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-bold">todo-api</h3>
@@ -123,6 +119,7 @@ function App() {
             <span>31 commits</span>
           </div>
         </div>
+
         <div className="rounded-xl border-2 border-[#222222] p-8">
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-bold">dotfiles</h3>
